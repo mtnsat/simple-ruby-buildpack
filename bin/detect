@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# bin/detect <build-dir>
+
+set -e
+
+cd "$1"
+
+if [ -e Gemfile ]; then
+    echo "Ruby"
+else
+    echo no
+    exit 1
+fi

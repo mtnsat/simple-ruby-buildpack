@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# bin/compile <build-dir> <cache-dir>
+
+set -e
+
+cd "$1"
+
+echo "Installing gem dependencies"
+bundle install --local --without development:test --path vendor/cache 2>&1
